@@ -29,8 +29,8 @@ example
 	"name": "freddie",
 	"email": "freddie@email.com",
 	"locaion": "savannah, ga",
-  "user_type": 1,
-  "user_avatar": null
+  	"user_type": 1,
+  	"user_avatar": null
 }
 ```
 
