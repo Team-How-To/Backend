@@ -107,7 +107,8 @@ router.get('/singleuser/:id', auth, (req, res) => {
           message: `success`,
           name: found.name,
           username: found.username,
-          user_type: found.user_type
+          user_type: found.user_type,
+          userid: found.id
         });
       } else {
         res
