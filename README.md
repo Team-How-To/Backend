@@ -57,3 +57,46 @@ example
 ```
 
 returns their token and all user info except for their hashed password
+
+
+<h1>Get list of all users</h1>
+
+*`HTTP method:`***`GET`**
+
+*`URL:`***`/api/users/`**
+
+requires valid token passed in through Authorization header
+
+shows all user info except for passwords (passwords are also hashed)
+
+
+<h1>Get user by id</h1>
+
+*`HTTP method:`***`GET`**
+
+*`URL:`***`/api/users/singleuser/:id`**
+
+pass in the user id through url
+
+returns user info for single user
+
+
+<h1>Edit User</h1>
+
+requires valid token
+
+*`HTTP method:`***`PUT`**
+
+*`URL:`***`/api/users/edituser/:id`**
+
+user id passed in through url and user edits passed in through request body
+
+<h1>Delete User</h1>
+
+requires valid token
+
+*`HTTP method:`***`DEL`**
+
+*`URL:`***`/api/users/deleteuser/:id`**
+
+user id passed in through url
