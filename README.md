@@ -18,7 +18,7 @@ endpoint example: https://how-too.herokuapp.com/api/users/login
 | name           | String |   YES    |   NO   |                       |
 | email          | String |   NO     |  YES   |                       |
 | location       | String |   NO     |  NO    |                       |
-| user_type      | Integer|   YES    |  NO    |                       |
+| user_type      | Integer|   YES    |  NO    | 1 is a creator, 2 is a consumer. front end should ask user and set type based upon selection                      |
 | user_avatar    | String |   NO     |  NO    |                       |
 
 example
