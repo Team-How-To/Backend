@@ -6,7 +6,8 @@ module.exports = {
   findBy,
   deleteUser,
   editUser,
-  find
+  find,
+  findById
 };
 
 // function addUser(user) {
@@ -32,6 +33,12 @@ function findBy(filter) {
     .where(filter)
     .first();
 } //find a user by the filter set
+
+function findById(id) {
+  return db('users')
+    .where({ id })
+    .first();
+}
 
 function deleteUser(id) {
   return db('users')
