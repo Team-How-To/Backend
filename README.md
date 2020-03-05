@@ -100,3 +100,85 @@ requires valid token
 *`URL:`***`/api/users/deleteuser/:id`**
 
 user id passed in through url
+
+
+<h1>Get all how to guides</h1>
+
+*`HTTP method:`***`GET`**
+
+*`URL:`***`/api/howto`**
+
+
+returns all how to guides in database
+
+
+<h1>Get how to guide by id</h1>
+
+*`HTTP method:`***`GET`**
+
+*`URL:`***`/api/howto/:id`**
+
+
+returns one how to guide from database
+
+
+<h1>Get all user how to guides</h1>
+
+*`HTTP method:`***`GET`**
+
+*`URL:`***`/api/howto/userhowto/:id`**
+
+
+returns all how to guides for specific user in database
+
+
+<h1>Create How To</h1>
+
+*`HTTP method:`***`POST`**
+
+*`URL:`***`/api/howto/newhowto`**
+
+| Name           | Type   | Required | Unique | Description           |
+| :------------- | :----- | :------: | :----: | :-------------------- |
+| title          | String |   YES    |   NO   |                       |
+| steps          | String |   YES    |   NO   |                       |
+| ht_pic         | String |   NO     |   NO   | picture url           |
+| user_id        | Integer|   YES    |  YES   |                       |
+
+example
+```
+{
+	"title": " New how to",
+	"steps": "1. do this.  2. do that"
+	"ht_pic": null
+	"user_id": 1
+	
+}
+```
+
+creates and returns newly created how to 
+
+<h1>Delete How to</h1>
+
+requires valid token
+require valid creator account, which needs user_id passed in req.body
+
+*`HTTP method:`***`DEL`**
+
+*`URL:`***`/api/howto/delete/:id`**
+
+how to  id passed in through url
+
+<h1>Edit how to</h1>
+
+requires valid token
+requires valid creator account, which needs user_id in req.body
+
+*`HTTP method:`***`PUT`**
+
+*`URL:`***`/api/howto/edithowto/:id`**
+
+how to id passed in through url and user edits passed in through request body
+
+
+
