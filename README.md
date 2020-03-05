@@ -193,12 +193,16 @@ requires valid creator account, which needs user_id in req.body
 | Name           | Type   | Required | Unique | Description           |
 | :------------- | :----- | :------: | :----: | :-------------------- |
 | user_id        | Integer|   YES    |  YES   |   current user id     |
+| title          | String |   NO     |   NO   |                       |
+| steps          | String |   NO     |   NO   |                       |
+| ht_pic         | String |   NO     |   NO   | picture url           |
 
 example
 ```
 {
 
 	"user_id": 1
+	"title": "updated title"
 	
 }
 ```
