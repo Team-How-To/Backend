@@ -89,6 +89,23 @@ requires valid token
 
 *`URL:`***`/api/users/edituser/:id`**
 
+| Name           | Type   | Required | Unique | Description           |
+| :------------- | :----- | :------: | :----: | :-------------------- |
+| name           | String |   NO     |   NO   |                       |
+| email          | String |   NO     |  YES   |                       |
+| location       | String |   NO     |  NO    |                       |
+| user_avatar    | String |   NO     |  NO    |                       |
+
+example
+```
+{
+	
+	"name": " updated freddie",
+	
+}
+```
+
+
 user id passed in through url and user edits passed in through request body
 
 <h1>Delete User</h1>
