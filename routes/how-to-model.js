@@ -6,7 +6,8 @@ module.exports = {
   find,
   deleteHowTo,
   editHowTo,
-  showUserHowTos
+  showUserHowTos,
+  findById
 };
 
 // function addHowTo(howto){
@@ -28,6 +29,9 @@ function findBy(filter) {
 function find() {
   return db('how_to_guides');
 }
+function findById(id) {
+  return db('how_to_guides').where({ id });
+}
 
 function editHowTo(data, id) {
   return db('how_to_guides')
@@ -42,5 +46,7 @@ function deleteHowTo(id) {
 }
 
 function showUserHowTos(id) {
-  return db('how_to_guides as hg').join('users as u', 'hg.user_id', 'u.id');
+  return db('how_to_guides as hg')
+    .join('users as u', 'u.id', 'hg.user_id')
+    .where('hg.user_id', '=', id);
 }
