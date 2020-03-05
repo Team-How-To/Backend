@@ -143,7 +143,7 @@ returns all how to guides for specific user in database
 | title          | String |   YES    |   NO   |                       |
 | steps          | String |   YES    |   NO   |                       |
 | ht_pic         | String |   NO     |   NO   | picture url           |
-| user_id        | Integer|   YES    |  YES   |                       |
+| user_id        | Integer|   YES    |  YES   |  current user id      |
 
 example
 ```
@@ -169,7 +169,7 @@ require valid creator account, which needs user_id passed in req.body
 
 | Name           | Type   | Required | Unique | Description           |
 | :------------- | :----- | :------: | :----: | :-------------------- |
-| user_id        | Integer|   YES    |  YES   |                       |
+| user_id        | Integer|   YES    |  YES   |    current user id    |
 
 example
 ```
@@ -192,7 +192,7 @@ requires valid creator account, which needs user_id in req.body
 *`URL:`***`/api/howto/edithowto/:id`**
 | Name           | Type   | Required | Unique | Description           |
 | :------------- | :----- | :------: | :----: | :-------------------- |
-| user_id        | Integer|   YES    |  YES   |                       |
+| user_id        | Integer|   YES    |  YES   |   current user id     |
 
 example
 ```
