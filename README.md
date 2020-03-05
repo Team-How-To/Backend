@@ -167,6 +167,19 @@ require valid creator account, which needs user_id passed in req.body
 
 *`URL:`***`/api/howto/delete/:id`**
 
+| Name           | Type   | Required | Unique | Description           |
+| :------------- | :----- | :------: | :----: | :-------------------- |
+| user_id        | Integer|   YES    |  YES   |                       |
+
+example
+```
+{
+
+	"user_id": 1
+	
+}
+```
+
 how to  id passed in through url
 
 <h1>Edit how to</h1>
@@ -177,6 +190,18 @@ requires valid creator account, which needs user_id in req.body
 *`HTTP method:`***`PUT`**
 
 *`URL:`***`/api/howto/edithowto/:id`**
+| Name           | Type   | Required | Unique | Description           |
+| :------------- | :----- | :------: | :----: | :-------------------- |
+| user_id        | Integer|   YES    |  YES   |                       |
+
+example
+```
+{
+
+	"user_id": 1
+	
+}
+```
 
 how to id passed in through url and user edits passed in through request body
 
