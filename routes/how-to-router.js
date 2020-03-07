@@ -57,7 +57,7 @@ router.post('/newhowto', auth, userAuth, (req, res) => {
 //todo - delete how to
 //needs userid in req.body
 
-router.delete('/delete/:id', auth, userAuth, (req, res) => {
+router.delete('/delete/:id', auth, (req, res) => {
   const deleteId = req.params.id;
   HowTo.findById(deleteId)
     .then(exist => {
